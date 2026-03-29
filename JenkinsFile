@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+
+    tools {
+        jdk 'JDK17'
+        maven 'MAVEN'
+    }
+
+    environment {
+        REPO_URL = 'git@github.com:stha-sush/library-room-booking.git'
+        APP_NAME = 'library-room-booking-0.0.1-SNAPSHOT.jar'
+    }
+
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                git branch: 'dev',
+                    url: "${REPO_URL}"
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean package -DskipTests'
+            }
+        }
+
+        stage('Deploy Dev') {
+            steps {
+                sh '''
+                mkdir -p ~/deployment/dev
+                cp target/${APP_NAME} ~/deployment/dev
+                cd ~/deployment/dev
+                pkill -f ${APP_NAME} || true
+                nohup java -jar ${APP_NAME} --server.port=8081 > app.log 2>&1 &
+                '''
+            }
+        }
+    }
+}
