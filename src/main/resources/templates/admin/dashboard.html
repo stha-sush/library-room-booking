@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::section})}">
+<section>
+
+  <h4 class="mb-3">Admin Dashboard</h4>
+
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Student Accounts</h5>
+          <p class="text-muted">Create students and share credentials.</p>
+          <a class="btn btn-primary" th:href="@{/admin/students}">Manage Students</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Rooms</h5>
+          <p class="text-muted">View and maintain room inventory.</p>
+          <a class="btn btn-primary" th:href="@{/admin/rooms}">View Rooms</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::section})}">
+<section>
+
+  <div class="p-4 p-md-5 mb-4 rounded-3 bg-light border">
+    <div class="container-fluid py-2">
+      <h1 class="display-6 fw-semibold"> Book a study room</h1>
+      <p class="text-muted mb-0"> Search availability, then book in seconds.</p>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <div class="card shadow-sm mb-3">
+    <div class="card-body">
+      <h5 class="card-title mb-3">Search Availability</h5>
+
+      <div id="searchMsg" class="mb-3"></div>
+
+      <form id="searchForm" class="row g-3">
+        <div class="col-md-3">
+          <label class="form-label">Date</label>
+          <input class="form-control" type="date" name="date" th:value="${today}" required>
+          <div class="form-text">Past dates cannot be selected.</div>
+        </div>
+
+        <div class="col-md-2">
+          <label class="form-label">Start</label>
+          <input class="form-control" type="time" name="start" value="10:00" required>
+        </div>
+
+        <div class="col-md-2">
+          <label class="form-label">End</label>
+          <input class="form-control" type="time" name="end" value="11:00" required>
+        </div>
+
+        <div class="col-md-2">
+          <label class="form-label">Capacity</label>
+          <input class="form-control" type="number" min="1" name="capacity" placeholder="e.g., 4">
+        </div>
+
+        <div class="col-md-3">
+          <label class="form-label">Room Type</label>
+          <select class="form-select" name="type">
+            <option value="">Any</option>
+            <option th:each="t : ${types}" th:value="${t}" th:text="${t}"></option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Building</label>
+          <!-- populated by JS from /api/buildings -->
+          <select class="form-select" name="building" id="buildingSelect">
+            <option value="">Any</option>
+          </select>
+          <div class="form-text">Choose a building or keep “Any”.</div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div class="mt-3">
+    <h5 class="mb-2">Available Rooms</h5>
+    <div id="results" class="row g-3"></div>
+  </div>
+
+  <!-- Booking Panel-->
+  <div id="bookingPanel" class="card shadow-sm mt-4 d-none">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-start">
+        <div>
+          <h5 class="card-title mb-1">Create Booking</h5>
+          <div class="text-muted small">
+            Selected room: <span id="bookingRoomLabel"></span>
+          </div>
+        </div>
+        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="closeBookingPanel()">
+          Close
+        </button>
+      </div>
+
+      <div id="bookingMsg" class="mt-3"></div>
+
+      <form id="bookingForm" class="row g-3 mt-1" onsubmit="submitBooking(event)">
+        <!-- hidden fields filled by JS -->
+        <input type="hidden" name="roomId">
+        <input type="hidden" name="bookingDate">
+        <input type="hidden" name="startTime">
+        <input type="hidden" name="endTime">
+
+        <div class="col-md-6">
+          <label class="form-label">Purpose</label>
+          <input class="form-control" name="purpose" placeholder="Study / Group discussion" required>
+        </div>
+
+        <div class="col-md-3">
+          <label class="form-label">Participants</label>
+          <input class="form-control" type="number" name="participants" min="1" value="2" required>
+        </div>
+
+        <div class="col-md-12">
+          <label class="form-label">Note (optional)</label>
+          <input class="form-control" name="note" placeholder="Any extra info (optional)">
+        </div>
+
+        <div class="col-12 d-flex gap-2">
+          <button type="submit" class="btn btn-success">Confirm Booking</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="closeBookingPanel()">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</section>
+</html>

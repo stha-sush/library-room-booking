@@ -1,0 +1,19 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.navbar {
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+#results .card {
+  transition: transform 0.2s ease;
+}
+
+#results .card:hover {
+  transform: translateY(-3px);
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::section})}">
+<section>
+
+  <h4 class="mb-3">Manage Students</h4>
+
+  <div class="card shadow-sm mb-3">
+    <div class="card-body">
+      <h6 class="mb-3">Create Student Account</h6>
+
+      <form id="createStudentForm" class="row g-3">
+        <div class="col-md-3">
+          <label class="form-label">Username</label>
+          <input class="form-control" name="username" required>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Full Name</label>
+          <input class="form-control" name="fullName" required>
+        </div>
+
+        <div class="col-md-3">
+          <label class="form-label">Email</label>
+          <input class="form-control" type="email" name="email" required>
+        </div>
+
+        <div class="col-md-2">
+          <label class="form-label">Temp Password</label>
+          <input class="form-control" name="tempPassword" value="Student@123" required>
+        </div>
+
+        <div class="col-12 d-flex gap-2">
+          <button class="btn btn-primary" type="submit">Create Student</button>
+          <div id="studentMsg" class="small text-muted align-self-center"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="card shadow-sm">
+    <div class="table-responsive">
+      <table class="table table-striped mb-0">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="u : ${students}">
+          <td th:text="${u.id}"></td>
+          <td th:text="${u.username}"></td>
+          <td th:text="${u.fullName}"></td>
+          <td th:text="${u.email}"></td>
+          <td th:text="${u.role}"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>
+</html>
