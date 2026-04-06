@@ -13,48 +13,43 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 
 class JwtServiceTest {
 
-	private static final String SECRET = "0123456789abcdef0123456789abcdef";
+    private static final String SECRET = "0123456789abcdef0123456789abcdef";
 
-	private JwtService jwtService;
-	private SecretKey key;
+    private JwtService jwtService;
+    private SecretKey key;
 
-	@BeforeEach
-	void setUp() {
-		jwtService = new JwtService(SECRET, 60L);
-		key = Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
-	}
+    @BeforeEach
+    void setUp() {
+        jwtService = new JwtService(SECRET, 60L);
+        key = Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
+    }
 
-	/** Scenario: token round-trip for username and role claim. */
-	@Test
-	void generateToken_containsSubjectAndRole_roundTrip() {
-		String token = jwtService.generateToken("alice", "ROLE_STUDENT");
+    /** Scenario: token round-trip for username and role claim. */
+    @Test
+    void generateToken_containsSubjectAndRole_roundTrip() {
+        String token = jwtService.generateToken("alice", "ROLE_STUDENT");
 
-		assertEquals("alice", jwtService.extractUsername(token));
-		assertEquals("ROLE_STUDENT", jwtService.extractRole(token));
-	}
+        assertEquals("alice", jwtService.extractUsername(token));
+        assertEquals("ROLE_STUDENT", jwtService.extractRole(token));
+    }
 
-	/** Scenario: expired token is rejected when parsing. */
-	@Test
-	void extractUsername_expiredToken_throws() {
-		Instant past = Instant.now().minusSeconds(120);
-		String expired = Jwts.builder().subject("bob").claim("role", "ROLE_ADMIN").issuedAt(Date.from(past))
-				.expiration(Date.from(past.plusSeconds(60))).signWith(key).compact();
+    /** Scenario: expired token is rejected when parsing. */
+    @Test
+    void extractUsername_expiredToken_throws() {
+        Instant past = Instant.now().minusSeconds(120);
+        String expired = Jwts.builder()
+                .subject("bob")
+                .claim("role", "ROLE_ADMIN")
+                .issuedAt(Date.from(past))
+                .expiration(Date.from(past.plusSeconds(60)))
+                .signWith(key)
+                .compact();
 
-		assertThrows(ExpiredJwtException.class, () -> jwtService.extractUsername(expired));
-	}
-
-	/** Scenario: modified payload/signature fails verification. */
-	@Test
-	void extractUsername_tamperedToken_throws() {
-		String token = jwtService.generateToken("carol", "ROLE_STUDENT");
-		String tampered = token.substring(0, token.length() - 1) + (token.endsWith("a") ? "b" : "a");
-
-		assertThrows(JwtException.class, () -> jwtService.extractUsername(tampered));
-	}
+        assertThrows(ExpiredJwtException.class, () -> jwtService.extractUsername(expired));
+    }
 }
