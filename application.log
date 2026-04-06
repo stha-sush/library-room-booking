@@ -1,73 +1,175 @@
-2026-04-05T07:43:29.028+05:45  INFO 49054 --- [library-room-booking] [restartedMain] c.e.l.LibraryRoomBookingApplication      : Starting LibraryRoomBookingApplication using Java 17.0.17 with PID 49054 (/Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking/target/classes started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
-2026-04-05T07:43:29.031+05:45  INFO 49054 --- [library-room-booking] [restartedMain] c.e.l.LibraryRoomBookingApplication      : No active profile set, falling back to 1 default profile: "default"
-2026-04-05T07:43:29.062+05:45  INFO 49054 --- [library-room-booking] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-05T07:43:29.062+05:45  INFO 49054 --- [library-room-booking] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-05T07:43:29.842+05:45  INFO 49054 --- [library-room-booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-05T07:43:29.868+05:45  INFO 49054 --- [library-room-booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
-2026-04-05T07:43:30.267+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-04-05T07:43:30.286+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-05T07:43:30.286+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2026-04-05T07:43:30.325+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-04-05T07:43:30.325+05:45  INFO 49054 --- [library-room-booking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1263 ms
-2026-04-05T07:43:30.418+05:45  INFO 49054 --- [library-room-booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-05T07:43:30.546+05:45  INFO 49054 --- [library-room-booking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14bfdf8b
-2026-04-05T07:43:30.547+05:45  INFO 49054 --- [library-room-booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-05T07:43:30.551+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3307/librarydb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true'
-2026-04-05T07:43:30.657+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-04-05T07:43:30.684+05:45  INFO 49054 --- [library-room-booking] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-04-05T07:43:30.703+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-04-05T07:43:30.883+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-05T07:43:31.286+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-05T07:43:31.383+05:45  INFO 49054 --- [library-room-booking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-05T07:43:31.583+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-04-05T07:43:31.782+05:45  INFO 49054 --- [library-room-booking] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-05T07:43:31.950+05:45  WARN 49054 --- [library-room-booking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-04-05T07:43:32.006+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2026-04-05T07:43:32.157+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-04-05T07:43:32.376+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-04-05T07:43:32.406+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-04-05T07:43:32.415+05:45  INFO 49054 --- [library-room-booking] [restartedMain] c.e.l.LibraryRoomBookingApplication      : Started LibraryRoomBookingApplication in 3.606 seconds (process running for 4.069)
-2026-04-05T07:43:39.930+05:45  INFO 49054 --- [library-room-booking] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-05T07:43:39.930+05:45  INFO 49054 --- [library-room-booking] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-05T07:43:39.937+05:45  INFO 49054 --- [library-room-booking] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2026-04-05T07:43:57.055+05:45  INFO 49054 --- [library-room-booking] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2026-04-05T07:43:57.093+05:45  INFO 49054 --- [library-room-booking] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-05T07:43:57.106+05:45  INFO 49054 --- [library-room-booking] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-04-05T07:43:57.114+05:45  INFO 49054 --- [library-room-booking] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-04-05T07:43:57.259+05:45  INFO 49054 --- [library-room-booking] [restartedMain] c.e.l.LibraryRoomBookingApplication      : Starting LibraryRoomBookingApplication using Java 17.0.17 with PID 49054 (/Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking/target/classes started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
-2026-04-05T07:43:57.259+05:45  INFO 49054 --- [library-room-booking] [restartedMain] c.e.l.LibraryRoomBookingApplication      : No active profile set, falling back to 1 default profile: "default"
-2026-04-05T07:43:57.484+05:45  INFO 49054 --- [library-room-booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-05T07:43:57.497+05:45  INFO 49054 --- [library-room-booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
-2026-04-05T07:43:57.673+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-04-05T07:43:57.675+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-05T07:43:57.675+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2026-04-05T07:43:57.696+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-04-05T07:43:57.696+05:45  INFO 49054 --- [library-room-booking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 435 ms
-2026-04-05T07:43:57.771+05:45  INFO 49054 --- [library-room-booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2026-04-05T07:43:57.857+05:45  INFO 49054 --- [library-room-booking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fc4bf4f
-2026-04-05T07:43:57.858+05:45  INFO 49054 --- [library-room-booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2026-04-05T07:43:57.858+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3307/librarydb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true'
-2026-04-05T07:43:57.949+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-04-05T07:43:57.951+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-04-05T07:43:57.974+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-05T07:43:58.068+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-05T07:43:58.559+05:45  INFO 49054 --- [library-room-booking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-05T07:43:58.792+05:45  INFO 49054 --- [library-room-booking] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-04-05T07:43:58.901+05:45  WARN 49054 --- [library-room-booking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-04-05T07:43:58.991+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2026-04-05T07:43:59.301+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-04-05T07:43:59.596+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-04-05T07:43:59.612+05:45  INFO 49054 --- [library-room-booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-04-05T07:43:59.617+05:45  INFO 49054 --- [library-room-booking] [restartedMain] c.e.l.LibraryRoomBookingApplication      : Started LibraryRoomBookingApplication in 2.37 seconds (process running for 31.272)
-2026-04-05T07:43:59.647+05:45  INFO 49054 --- [library-room-booking] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-04-05T07:44:16.623+05:45  INFO 49054 --- [library-room-booking] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-05T07:44:16.626+05:45  INFO 49054 --- [library-room-booking] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-05T07:44:16.642+05:45  INFO 49054 --- [library-room-booking] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2026-04-05T07:53:07.327+05:45  WARN 49054 --- [library-room-booking] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
-2026-04-05T07:53:15.496+05:45  WARN 49054 --- [library-room-booking] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
-2026-04-05T07:53:18.901+05:45  WARN 49054 --- [library-room-booking] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
-2026-04-05T07:53:30.809+05:45  WARN 49054 --- [library-room-booking] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
-2026-04-05T07:58:04.113+05:45  WARN 49054 --- [library-room-booking] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
-2026-04-05T08:05:55.966+05:45  INFO 49054 --- [library-room-booking] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-05T08:05:56.052+05:45  INFO 49054 --- [library-room-booking] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2026-04-05T08:05:56.072+05:45  INFO 49054 --- [library-room-booking] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-04-06T14:04:09.160+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.i.LoginAndBookingIntegrationTest   : Starting LoginAndBookingIntegrationTest using Java 17.0.17 with PID 64948 (started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
+2026-04-06T14:04:09.166+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.i.LoginAndBookingIntegrationTest   : The following 1 profile is active: "test"
+2026-04-06T14:04:09.888+05:45  INFO 64948 --- [library-room-booking] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-06T14:04:09.934+05:45  INFO 64948 --- [library-room-booking] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2026-04-06T14:04:10.468+05:45  INFO 64948 --- [library-room-booking] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-06T14:04:10.518+05:45  INFO 64948 --- [library-room-booking] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-06T14:04:10.542+05:45  INFO 64948 --- [library-room-booking] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-06T14:04:10.627+05:45  INFO 64948 --- [library-room-booking] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-06T14:04:10.650+05:45  INFO 64948 --- [library-room-booking] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-06T14:04:10.813+05:45  INFO 64948 --- [library-room-booking] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-06T14:04:10.818+05:45  INFO 64948 --- [library-room-booking] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-06T14:04:11.410+05:45  INFO 64948 --- [library-room-booking] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-06T14:04:11.460+05:45  INFO 64948 --- [library-room-booking] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T14:04:11.742+05:45  INFO 64948 --- [library-room-booking] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-06T14:04:12.107+05:45  INFO 64948 --- [library-room-booking] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-04-06T14:04:12.293+05:45  WARN 64948 --- [library-room-booking] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-06T14:04:12.392+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-04-06T14:04:12.648+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-06T14:04:13.048+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-06T14:04:13.049+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-06T14:04:13.049+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-04-06T14:04:13.091+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.i.LoginAndBookingIntegrationTest   : Started LoginAndBookingIntegrationTest in 4.256 seconds (process running for 6.881)
+2026-04-06T14:04:13.388+05:45  INFO 64948 --- [library-room-booking] [main] com.example.library.config.DataSeeder    : Seeded default users: admin/Admin@123 and student1/Student@123
+2026-04-06T14:04:13.394+05:45  INFO 64948 --- [library-room-booking] [main] com.example.library.config.DataSeeder    : Seeded sample rooms
+2026-04-06T14:04:13.740+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.controller.LogoutRestControllerTest]: LogoutRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:13.753+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.controller.LogoutRestControllerTest
+2026-04-06T14:04:13.755+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-04-06T14:04:13.766+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.LogoutRestControllerTest         : Starting LogoutRestControllerTest using Java 17.0.17 with PID 64948 (started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
+2026-04-06T14:04:13.766+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.LogoutRestControllerTest         : No active profile set, falling back to 1 default profile: "default"
+2026-04-06T14:04:13.918+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-04-06T14:04:13.963+05:45  WARN 64948 --- [library-room-booking] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ecc6f72f-8c54-47aa-be6b-b6018d97460b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-06T14:04:13.976+05:45  INFO 64948 --- [library-room-booking] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-06T14:04:13.992+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-06T14:04:13.993+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-06T14:04:13.993+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-04-06T14:04:14.002+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.LogoutRestControllerTest         : Started LogoutRestControllerTest in 0.247 seconds (process running for 7.791)
+2026-04-06T14:04:14.015+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.controller.AdminStudentRestControllerTest]: AdminStudentRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:14.022+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.controller.AdminStudentRestControllerTest
+2026-04-06T14:04:14.024+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-04-06T14:04:14.033+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.AdminStudentRestControllerTest   : Starting AdminStudentRestControllerTest using Java 17.0.17 with PID 64948 (started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
+2026-04-06T14:04:14.033+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.AdminStudentRestControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-04-06T14:04:14.183+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-04-06T14:04:14.217+05:45  WARN 64948 --- [library-room-booking] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7faeea2a-40db-44a2-a514-b953be1d6ef8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-06T14:04:14.218+05:45  INFO 64948 --- [library-room-booking] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-06T14:04:14.224+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-06T14:04:14.224+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-06T14:04:14.224+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-04-06T14:04:14.228+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.AdminStudentRestControllerTest   : Started AdminStudentRestControllerTest in 0.204 seconds (process running for 8.018)
+2026-04-06T14:04:14.276+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.controller.AvailabilityRestControllerTest]: AvailabilityRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:14.281+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.controller.AvailabilityRestControllerTest
+2026-04-06T14:04:14.283+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-04-06T14:04:14.292+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.AvailabilityRestControllerTest   : Starting AvailabilityRestControllerTest using Java 17.0.17 with PID 64948 (started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
+2026-04-06T14:04:14.292+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.AvailabilityRestControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-04-06T14:04:14.397+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-04-06T14:04:14.433+05:45  WARN 64948 --- [library-room-booking] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 90fad5aa-b784-41ab-872e-f4ba7f332e08
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-06T14:04:14.433+05:45  INFO 64948 --- [library-room-booking] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-06T14:04:14.440+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-06T14:04:14.440+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-06T14:04:14.440+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-04-06T14:04:14.445+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.AvailabilityRestControllerTest   : Started AvailabilityRestControllerTest in 0.162 seconds (process running for 8.234)
+2026-04-06T14:04:14.476+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.controller.AuthRestControllerTest]: AuthRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:14.482+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.controller.AuthRestControllerTest
+2026-04-06T14:04:14.484+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-04-06T14:04:14.492+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.controller.AuthRestControllerTest  : Starting AuthRestControllerTest using Java 17.0.17 with PID 64948 (started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
+2026-04-06T14:04:14.493+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.controller.AuthRestControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-04-06T14:04:14.608+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-04-06T14:04:14.638+05:45  WARN 64948 --- [library-room-booking] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4a6fb403-6c13-4f91-aad1-53d808d30ce2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-06T14:04:14.638+05:45  INFO 64948 --- [library-room-booking] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-06T14:04:14.645+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-06T14:04:14.645+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-06T14:04:14.645+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-04-06T14:04:14.649+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.controller.AuthRestControllerTest  : Started AuthRestControllerTest in 0.166 seconds (process running for 8.439)
+2026-04-06T14:04:14.694+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.controller.AdminRoomRestControllerTest]: AdminRoomRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:14.698+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.controller.AdminRoomRestControllerTest
+2026-04-06T14:04:14.700+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-04-06T14:04:14.707+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.AdminRoomRestControllerTest      : Starting AdminRoomRestControllerTest using Java 17.0.17 with PID 64948 (started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
+2026-04-06T14:04:14.707+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.AdminRoomRestControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2026-04-06T14:04:14.873+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-04-06T14:04:15.037+05:45  WARN 64948 --- [library-room-booking] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b6e437fc-92b7-45d7-9d06-9f38366a5350
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-06T14:04:15.038+05:45  INFO 64948 --- [library-room-booking] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-06T14:04:15.104+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-06T14:04:15.104+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-06T14:04:15.105+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-04-06T14:04:15.117+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.AdminRoomRestControllerTest      : Started AdminRoomRestControllerTest in 0.418 seconds (process running for 8.906)
+2026-04-06T14:04:15.190+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.controller.BuildingsRestControllerTest]: BuildingsRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:15.196+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.controller.BuildingsRestControllerTest
+2026-04-06T14:04:15.198+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-04-06T14:04:15.206+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.BuildingsRestControllerTest      : Starting BuildingsRestControllerTest using Java 17.0.17 with PID 64948 (started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
+2026-04-06T14:04:15.207+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.BuildingsRestControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2026-04-06T14:04:15.278+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-04-06T14:04:15.305+05:45  WARN 64948 --- [library-room-booking] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 005219bb-255c-4182-8222-8061d38ee6e2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-06T14:04:15.305+05:45  INFO 64948 --- [library-room-booking] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-06T14:04:15.310+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-06T14:04:15.310+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-06T14:04:15.311+05:45  INFO 64948 --- [library-room-booking] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-04-06T14:04:15.318+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.c.BuildingsRestControllerTest      : Started BuildingsRestControllerTest in 0.12 seconds (process running for 9.107)
+2026-04-06T14:04:15.334+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.LibraryRoomBookingApplicationTests]: LibraryRoomBookingApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:15.337+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.LibraryRoomBookingApplicationTests
+2026-04-06T14:04:15.338+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-04-06T14:04:15.345+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.LibraryRoomBookingApplicationTests : Starting LibraryRoomBookingApplicationTests using Java 17.0.17 with PID 64948 (started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
+2026-04-06T14:04:15.345+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.LibraryRoomBookingApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2026-04-06T14:04:15.462+05:45  INFO 64948 --- [library-room-booking] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-06T14:04:15.468+05:45  INFO 64948 --- [library-room-booking] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2026-04-06T14:04:15.553+05:45  INFO 64948 --- [library-room-booking] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-06T14:04:15.555+05:45  INFO 64948 --- [library-room-booking] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-06T14:04:15.561+05:45  INFO 64948 --- [library-room-booking] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-06T14:04:15.561+05:45  INFO 64948 --- [library-room-booking] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-04-06T14:04:16.013+05:45  INFO 64948 --- [library-room-booking] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4950c344
+2026-04-06T14:04:16.013+05:45  INFO 64948 --- [library-room-booking] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-04-06T14:04:16.291+05:45  INFO 64948 --- [library-room-booking] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-06T14:04:16.711+05:45  INFO 64948 --- [library-room-booking] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T14:04:16.919+05:45  INFO 64948 --- [library-room-booking] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-04-06T14:04:17.034+05:45  WARN 64948 --- [library-room-booking] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-06T14:04:17.084+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-04-06T14:04:17.249+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-06T14:04:17.563+05:45  INFO 64948 --- [library-room-booking] [main] c.e.l.LibraryRoomBookingApplicationTests : Started LibraryRoomBookingApplicationTests in 2.225 seconds (process running for 11.352)
+2026-04-06T14:04:17.657+05:45  INFO 64948 --- [library-room-booking] [main] c.example.library.service.UserService    : Created student account username=newstudent
+2026-04-06T14:04:17.757+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.repo.RoomRepositoryTest]: RoomRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:17.768+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.repo.RoomRepositoryTest
+2026-04-06T14:04:17.769+05:45  INFO 64948 --- [library-room-booking] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-04-06T14:04:17.779+05:45  INFO 64948 --- [library-room-booking] [main] c.e.library.repo.RoomRepositoryTest      : Starting RoomRepositoryTest using Java 17.0.17 with PID 64948 (started by sushmitashrestha in /Users/sushmitashrestha/Documents/workspace-spring-tools-for-eclipse-4.32.0.RELEASE/library-room-booking)
+2026-04-06T14:04:17.779+05:45  INFO 64948 --- [library-room-booking] [main] c.e.library.repo.RoomRepositoryTest      : The following 1 profile is active: "test"
+2026-04-06T14:04:17.855+05:45  INFO 64948 --- [library-room-booking] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-06T14:04:17.884+05:45  INFO 64948 --- [library-room-booking] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2026-04-06T14:04:17.890+05:45  INFO 64948 --- [library-room-booking] [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2026-04-06T14:04:17.900+05:45  INFO 64948 --- [library-room-booking] [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:186f4dcd-eeea-4a0b-821f-1996b699206e;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-04-06T14:04:17.910+05:45  INFO 64948 --- [library-room-booking] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-06T14:04:17.911+05:45  INFO 64948 --- [library-room-booking] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-06T14:04:17.915+05:45  INFO 64948 --- [library-room-booking] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-06T14:04:17.961+05:45  INFO 64948 --- [library-room-booking] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-06T14:04:17.966+05:45  INFO 64948 --- [library-room-booking] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T14:04:17.997+05:45  INFO 64948 --- [library-room-booking] [main] c.e.library.repo.RoomRepositoryTest      : Started RoomRepositoryTest in 0.228 seconds (process running for 11.787)
+2026-04-06T14:04:18.016+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.repo.BookingRepositoryTest]: BookingRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:18.020+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.repo.BookingRepositoryTest
+2026-04-06T14:04:18.127+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.bdd.steps.CucumberSpringConfig]: CucumberSpringConfig does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:18.131+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.bdd.steps.CucumberSpringConfig
+2026-04-06T14:04:18.404+05:45  INFO 64948 --- [library-room-booking] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.library.bdd.steps.CucumberSpringConfig]: CucumberSpringConfig does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-06T14:04:18.405+05:45  INFO 64948 --- [library-room-booking] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.library.LibraryRoomBookingApplication for test class com.example.library.bdd.steps.CucumberSpringConfig
+2026-04-06T14:04:18.783+05:45  INFO 64948 --- [library-room-booking] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T14:04:18.950+05:45  INFO 64948 --- [library-room-booking] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-06T14:04:18.952+05:45  INFO 64948 --- [library-room-booking] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-06T14:04:18.962+05:45  INFO 64948 --- [library-room-booking] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T14:04:18.964+05:45  INFO 64948 --- [library-room-booking] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-04-06T14:04:18.967+05:45  INFO 64948 --- [library-room-booking] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-04-06T14:04:18.968+05:45  INFO 64948 --- [library-room-booking] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
